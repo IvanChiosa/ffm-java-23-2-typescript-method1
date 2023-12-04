@@ -33,12 +33,37 @@ function App() {
     const some: boolean = someNumbers.some((number) => number > 10);
     console.log(some);
 
+
+    function myNunmbers(num: number, name: string) : string {
+        return `${name} ${num}`
+    }
+
+    console.log(myNunmbers(5, "hello"));
+
+
+    const add = (a: number, b: number) : number => a + b;
+
+
+    const number = [1, 2, 3, 4, 5];
+    const squaredNumbers = number.map(num => num * num);
+    console.log(squaredNumbers);
+
+    const evenNumber = number.filter(num => num % 2 === 0);
+    console.log("evenNumber ", evenNumber);
+
   return (
     <>
         <h1>{doubleNumbers}</h1>
         <h2>{str}</h2>
         <h3>{total}</h3>
         <h3>{some}</h3>
+        <h3>{myNunmbers(5, "hallo")}</h3>
+        <h3>{add(5, 10)}</h3>
+        <h3>{add(5, 10)}</h3>
+        <h3>{evenNumber}</h3>
+
+
+
 
     </>
   )
